@@ -9,7 +9,7 @@ Build trang đặt vé bằng React
 Full controll user:
 ```
   + sen
-  +cusen11
+  + cusen11
 ```
 
 # Link backend :
