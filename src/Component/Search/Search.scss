@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search{
+    position: relative;
+    margin-right: 10px;
+    .iconSearch{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translate(0 ,-50%);
+    }
+    .box{
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 150%;
+        background: #5e505022;
+        border-radius: 10px;  
+        ul{ 
+            padding:0;
+            li{ 
+                padding:0 20px;
+                text-align: left;
+                list-style: none;
+                display: block; 
+                font-size: 14px;
+                color:#FF5252;
+                font-weight: bold;
+                cursor: pointer;
+                margin: 15px 0;
+            }
+        }
+    } 
+}
