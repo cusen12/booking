@@ -7,11 +7,13 @@ import Typography from '@material-ui/core/Typography';
 import { Button, ButtonGroup, Grid } from '@material-ui/core';
 import { Link } from "react-router-dom";
 import './CardItemMovide.scss';
+import Hero from '../Hero/Hero';
  
 function CardItemMovie(props) {
     const { itemMovie } = props;
     return (
         <>
+            <Hero/>
             {itemMovie.map((data) => 
                 <Grid className="cardItem" key={data.maPhim} item xs={3}
                 container>
@@ -36,7 +38,7 @@ function CardItemMovie(props) {
                         </CardActionArea> 
                         <ButtonGroup variant="contained" color="primary">
                                 <Button> Đặt vé </Button>
-                                <Button><Link to={`detail:${data.maPhim}`}>Xem</Link></Button>
+                                <Button><Link to={`detail${data.maPhim}`}>Xem</Link></Button>
                         </ButtonGroup>
                     </Card> 
                 </Grid>
