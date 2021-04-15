@@ -30,7 +30,7 @@ function Hero() {
         <>   
             <br/>
             <br/>
-            <Container className="hero-page">
+            <Grid className="hero-page">
                 <Slider {...settings}>
                     {movieImage.map((data) =>
                         <div key={data.maPhim} className="item"> 
@@ -62,7 +62,7 @@ function Hero() {
                         </div> 
                     )} 
                 </Slider>
-            </Container>
+            </Grid>
         </>
     );
 }
