@@ -40,15 +40,15 @@ function ListCard() {
                                     direction="row"
                                     wrap="wrap"
                                     justify="space-between">
-                                
+                                 
                                 <CardItemMovie itemMovie={itemMovie}/> 
                             </Grid>
                             <Grid
                               container 
                               justify="flex-end">
                                 <ButtonGroup disableElevation variant="contained" color="primary">
-                                    <Button disabled={currentPage === 1 ? true : false} onClick={handlePrevPage}>Pre</Button>
-                                    <Button disabled={currentPage === totalPage ? true : false} onClick={handleNextPage}>Next</Button>
+                                    <Button color="primary" disabled={currentPage === 1 ? true : false} onClick={handlePrevPage}>Pre</Button>
+                                    <Button color="primary" disabled={currentPage === totalPage ? true : false} onClick={handleNextPage}>Next</Button>
                                 </ButtonGroup>
                             </Grid>
                     </Grid>

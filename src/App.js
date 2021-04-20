@@ -4,13 +4,16 @@ import Header from './Component/Header/Header';
 import ListCard from './Component/List/ListCard'; 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import DetailFirm from './Pages/DetailFilm/DetailFirm';
+import Footer from './Component/Footer/Footer';
 const theme = createMuiTheme({
   palette: {
     primary:{
       main: '#000000',
+      contrastText: "#424242" 
     },
     secondary: {
       main: '#ffffff',
+      contrastText: "#ffffff" 
     }
   } ,
   typography:{
@@ -46,16 +49,16 @@ function App() {
       <ThemeProvider theme={theme}>
         <Router>
         <>
-            <Header/> 
-            <Switch>
-              <Route path="/detail:filmId" children={<DetailFirm/>} /> 
-              <Route path="/">
-                <ListCard/>
-              </Route>
+          <Header/> 
+          <Switch>
+            <Route path="/detail:filmId" children={<DetailFirm/>} /> 
+            <Route path="/">
+              <ListCard/>
+            </Route>
           </Switch> 
-           
+          <Footer/>
         </>
-        </Router>
+        </Router> 
       </ThemeProvider>  
   );
 }

@@ -77,7 +77,7 @@ function Login() {
                         direction="column" 
                         >    
                                 
-                                <AccountCircleIcon fontSize="large" color="primary"/>
+                                <AccountCircleIcon fontSize="large" color="secondary"/>
                             </Grid>    
                          
                         <TextField name="userName" id="user-basic" label="User name" />

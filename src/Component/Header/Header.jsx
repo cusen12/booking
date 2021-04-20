@@ -22,9 +22,9 @@ function Header() {
     },[islogIn.taiKhoan])   
     return (
         <>  
-            <AppBar>
+            <AppBar className="header">
                 <Container className="contaniner">
-                    <Grid 
+                    <Grid
                     container
                     justify="space-between"
                     alignItems="center"> 
@@ -59,7 +59,7 @@ function Header() {
                 {(userAdmin === 'sen') ? <Button variant="outlined" color="primary">Quản lý phim</Button> : ''}  
             </Drawer>
             <Drawer anchor='right' open={iSdrawerLogin}>
-                <Button onClick={()=> setiSdrawerLogin(!iSdrawerLogin)}><ArrowForwardIcon color="primary"/></Button>
+                <Button onClick={()=> setiSdrawerLogin(!iSdrawerLogin)}><ArrowForwardIcon /></Button>
                 <Login/>
             </Drawer> 
         </>

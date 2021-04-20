@@ -42,8 +42,7 @@ function CardItemMovie(props) {
                                 <ButtonGroup variant="text" color="secondary">
                                         <Button> Đặt vé </Button>
                                         <Button><Link to={`detail${data.maPhim}`}>Xem</Link></Button>
-                                </ButtonGroup> 
-                                <Typography variant="button" color="secondary" align="right">{data.danhGia}/10</Typography> 
+                                </ButtonGroup>  
                             </Grid>
                         </Grid>
                         

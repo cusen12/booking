@@ -67,7 +67,7 @@ function User(props) {
     return (
         <> 
         
-            {(user.taiKhoan !== undefined) ? <AccountCircleIcon /> : ''}
+            {(user.taiKhoan !== undefined) ? <AccountCircleIcon color="secondary" /> : ''}
             <ArrowDropDownIcon className="pointer" color="secondary" onClick={handleClickArrowUser}/>
            
             <Grid style={ active ? {display: 'block'} : {display: 'none'} } className="user-info" item sm={3} md={2} container

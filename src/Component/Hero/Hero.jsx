@@ -29,9 +29,7 @@ function Hero() {
     },[])   
     return (
         <>   
-            <br/>
-            <br/>
-            <Container className="hero-page" style={{padding:"0"}}>
+            <Container className="hero-page" style={{padding:"0",paddingTop:"55px"}}>
                 <Slider {...settings}>
                     {movieImage.map((data) =>
                         <div key={data.maPhim} className="item"> 
