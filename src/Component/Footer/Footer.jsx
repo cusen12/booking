@@ -20,8 +20,7 @@ function Footer() {
                         <li><Link to="/">Liên hệ với chúng tôi</Link></li>
                         <li><Link to="/">Trung tâm trợ giúp</Link></li>
                         <li><Link to="/">Việc làm</Link></li>
-                        <li><Link to="/">Tùy chọn cookie</Link></li>
-                        <li><Link to="/">Câu hỏi thường gặp</Link></li>
+                        <li><Link to="/">Tùy chọn cookie</Link></li> 
                         <li><Link to="/">Thông báo pháp lý</Link></li> 
                         <li><Link to="/">Tài khoản</Link></li>
                         <li><Link to="/">Các cách xem</Link></li>
