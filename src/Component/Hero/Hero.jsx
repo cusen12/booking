@@ -11,6 +11,7 @@ function Hero() {
     const settings = {
         dots: false,
         infinite: true,
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -38,26 +39,23 @@ function Hero() {
                                 container
                                 justify="space-between"
                             >
-                                <Grid item sm={9}
+                                <Grid item
                                     container
                                 >
                                     <div className="img">
                                         <img src={data.hinhAnh} alt=""/>
                                         <div className="icon">
-                                            <a href={data.trailer} target="_blank" rel="noreferrer noopener"><PlayCircleOutlineIcon color="primary" className="play-youtube"/></a>
+                                            <a href={data.trailer} target="_blank" rel="noreferrer noopener"><PlayCircleOutlineIcon color="secondary" className="play-youtube"/></a>
                                         </div>
                                     </div>
+                                    <div className="content">
+                                        <h3>{data.tenPhim}</h3>
+                                        <p><b>Miêu tả</b> : <em>{data.moTa}</em></p>
+                                        <p><b>Ngày khởi chiếu</b> : <em>{data.ngayKhoiChieu}</em></p>
+                                        <p><b>Đánh giá</b> : <em>{data.danhGia}/10</em></p>
+                                    </div>
                                 </Grid>
-                                <Grid className="right-hero" item sm={3}
-                                    container
-                                    justify="flex-start" 
-                                    direction="column"
-                                >
-                                    <h3>{data.tenPhim}</h3>
-                                    <p><b>Miêu tả</b> : <em>{data.moTa}</em></p>
-                                    <p><b>Ngày khởi chiếu</b> : <em>{data.ngayKhoiChieu}</em></p>
-                                    <p><b>Đánh giá</b> : <em>{data.danhGia}/10</em></p>
-                                </Grid>
+                                
                             </Grid>
                         </div> 
                     )} 

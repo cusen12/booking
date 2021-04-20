@@ -7,7 +7,7 @@ import DetailFirm from './Pages/DetailFilm/DetailFirm';
 const theme = createMuiTheme({
   palette: {
     primary:{
-      main: '#FF5252',
+      main: '#000000',
     },
     secondary: {
       main: '#ffffff',
@@ -16,8 +16,28 @@ const theme = createMuiTheme({
   typography:{
     fontFamily: 'Raleway, Arial',
     fontWeight: 700,
-  }
+    h1: {
+      fontSize: 44,
+      fontWeight: 600
+    },
+    h2: {
+      fontSize: 34,
+      fontWeight: 600
+    },
+    h3: {
+      fontSize: 24,
+      fontWeight: 600
+    },
+    h4: {
+      fontSize: 18,
+      fontWeight: 600
+    },
+    h5: {
+      fontSize: 14,
+      fontWeight: 600
+    }
 
+  }  
 })
 
 function App() {  

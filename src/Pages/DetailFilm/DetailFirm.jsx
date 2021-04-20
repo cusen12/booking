@@ -15,11 +15,11 @@ function DetailFirm() {
     const [dayNuber ,setDay] = useState(); 
     const [age, setAge] = useState('');
     let { filmId } = useParams();  
-    const fullDayMY = (date) =>{
-        const d = new Date(date)
-       return  d.getHours() + "h" + d.getMinutes() +
-        "  " + d.getDate()+ "-" + d.getMonth()+"-" + d.getFullYear()
-    }
+    // const fullDayMY = (date) =>{
+    //     const d = new Date(date)
+    //    return  d.getHours() + "h" + d.getMinutes() +
+    //     "  " + d.getDate()+ "-" + d.getMonth()+"-" + d.getFullYear()
+    // }
     useEffect(() =>{
         const getData = async () =>{
             const respond = await fetch(`https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${filmId}`);
