@@ -1,6 +1,7 @@
 .cardItem{
     padding:0 5px;
     margin: 5px -5px !important;
+    position: relative; 
     img{
         width: 100%;
         height: 200px;
@@ -10,9 +11,21 @@
     }   min-height: 70px;
     a{
         text-decoration: none;
-        color:#000000;
+        color:#ffffff;
+    } 
+    .buttonGr{
+        position: absolute;
+        bottom: 0;
+        left: 16px;
     }
-    .btnGrpup{
-        padding:0 10px
+    .titleCard{
+        min-height: 40px;
     }
+    .MuiTypography-h4{
+        margin-bottom: 1rem;
+    }
+    .MuiCard-root{
+        background: #000;
+    }
+   
 }

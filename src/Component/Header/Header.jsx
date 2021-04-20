@@ -2,14 +2,12 @@ import { AppBar, Button, Container, Grid, Typography, Drawer  } from '@material-
 import MenuIcon from '@material-ui/icons/Menu';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import React, { useEffect, useState } from 'react'; 
-import HomeIcon from '@material-ui/icons/Home';
+import React, { useEffect, useState } from 'react';  
 import './header.scss'; 
 import Login from '../Login/Login'; 
 import { useSelector } from 'react-redux'; 
 import Search from '../Search/Search';
-import User from '../User/User';
-import { Link } from 'react-router-dom';
+import User from '../User/User'; 
 
 function Header() {   
     const [iSdrawer, setiSdrawer] = useState(false);
@@ -36,7 +34,7 @@ function Header() {
                         alignItems="center"
                         >
                             <MenuIcon className="pointer" onClick={()=> setiSdrawer(!iSdrawer)} fontSize="large" color="secondary"/> 
-                            <Link to="/"><HomeIcon className="pointer" fontSize="large" color="secondary"/></Link> 
+                             
                         </Grid>
                         <Grid item sm={10}
                             container

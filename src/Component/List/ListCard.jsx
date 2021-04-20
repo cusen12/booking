@@ -35,11 +35,12 @@ function ListCard() {
                         direction="column"
                         wrap="wrap"
                         justify="space-between"
-                        >  
+                        >  <Typography variant="h3" align="left" color="primary" className="bTittle"> Phim mới</Typography>
                             <Grid item md={12}  container
                                     direction="row"
                                     wrap="wrap"
                                     justify="space-between">
+                                
                                 <CardItemMovie itemMovie={itemMovie}/> 
                             </Grid>
                             <Grid
@@ -61,7 +62,7 @@ function ListCard() {
                                 direction="column"
                                 wrap="wrap"
                                 justify="space-between">
-                                <Typography variant="h3" className="bTittle"> Đặt vé nhanh </Typography>
+                                <Typography variant="h3" align="center" color="primary" className="bTittle"> Đặt vé nhanh </Typography>
                            </Grid>
                     </Grid> 
                 </Grid>

@@ -16,28 +16,37 @@ function CardItemMovie(props) {
                 <Grid className="cardItem" key={data.maPhim} item xs={3}
                 container>
                     <Card>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                alt="Contemplative Reptile"
-                                height="140"
-                                image={data.hinhAnh}
-                                title="Contemplative Reptile"
-                                 
-                            />
-                            <CardContent>
-                            <Typography className="titleCard" gutterBottom variant="h4" component="h4">
-                                {data.tenPhim}
-                            </Typography> 
-                            <Typography variant="h4" color="textSecondary" component="p">
-                                {data.danhGia}/10
-                            </Typography> 
-                            </CardContent> 
-                        </CardActionArea> 
-                        <ButtonGroup variant="text" color="primary" className="btnGrpup">
-                                <Button> Đặt vé </Button>
-                                <Button><Link to={`detail${data.maPhim}`}>Xem</Link></Button>
-                        </ButtonGroup>
+                        <Grid container
+                            justify="space-between"
+                            direction="column"
+                            className="card-box"
+                        >
+                            <Grid item> 
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        alt="Contemplative Reptile"
+                                        height="140"
+                                        image={data.hinhAnh}
+                                        title="Contemplative Reptile"
+                                        
+                                    />
+                                    <CardContent>
+                                    <Typography className="titleCard" color="secondary" gutterBottom variant="h4" component="h4">
+                                        {data.tenPhim}
+                                    </Typography>  
+                                    </CardContent> 
+                                </CardActionArea> 
+                            </Grid>
+                            <Grid item className="buttonGr">
+                                <ButtonGroup variant="text" color="secondary">
+                                        <Button> Đặt vé </Button>
+                                        <Button><Link to={`detail${data.maPhim}`}>Xem</Link></Button>
+                                </ButtonGroup> 
+                                <Typography variant="button" color="secondary" align="right">{data.danhGia}/10</Typography> 
+                            </Grid>
+                        </Grid>
+                        
                     </Card> 
                 </Grid>
             )}  
