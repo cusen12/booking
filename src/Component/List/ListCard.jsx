@@ -45,7 +45,7 @@ function ListCard() {
                             </Grid>
                             <Grid
                               container 
-                              justify="flex-end">
+                              justify="center">
                                 <ButtonGroup disableElevation variant="contained" color="primary">
                                     <Button color="primary" disabled={currentPage === 1 ? true : false} onClick={handlePrevPage}>Pre</Button>
                                     <Button color="primary" disabled={currentPage === totalPage ? true : false} onClick={handleNextPage}>Next</Button>
@@ -62,7 +62,7 @@ function ListCard() {
                                 direction="column"
                                 wrap="wrap"
                                 justify="space-between">
-                                <Typography variant="h3" align="center" color="primary" className="bTittle"> Đặt vé nhanh </Typography>
+                                <Typography variant="h3" align="center" color="primary" className="bTittle"> Tra cứu  </Typography>
                            </Grid>
                     </Grid> 
                 </Grid>
