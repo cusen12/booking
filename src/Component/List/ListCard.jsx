@@ -17,7 +17,7 @@ function ListCard() {
     }
     useEffect(()=>{
         const listMoviePagination = async () => {
-            const respond = await fetch(`https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=${currentPage}&soPhanTuTrenTrang=24`);
+            const respond = await fetch(`https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=${currentPage}&soPhanTuTrenTrang=32`);
             const respondJson = await respond.json();
             setitemMovie(respondJson.items);
             setTotalPage(respondJson.totalPages); 
