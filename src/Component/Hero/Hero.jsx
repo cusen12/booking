@@ -6,8 +6,8 @@ import { Button, Container, Grid, Typography } from '@material-ui/core';
 import './hero.scss';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 
-function Hero() {
-    const [ movieImage, setMovie] = useState([]);
+function Hero() { 
+    const [ movie, setMovie] = useState([]); 
     const settings = {
         dots: false,
         infinite: true,
@@ -20,13 +20,14 @@ function Hero() {
     };
     useEffect(()=>{
         const fetchMovie = async () => {
-            const respond = await fetch('https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=1&soPhanTuTrenTrang=5');
+            const respond = await fetch('https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=1&soPhanTuTrenTrang=8');
             const respondJson = await respond.json();  
             setMovie(respondJson.items);  
         }
         fetchMovie(); 
           
-    },[])   
+    },[]) 
+
     return (
         <>   
             <Container className="hero-page" style={{padding:"0",paddingTop:"55px"}}>
@@ -35,13 +36,13 @@ function Hero() {
                 >  
                     <Grid container item sm={6} style={{display:"block"}}>
                         <Slider {...settings}>
-                            {movieImage.map((data) =>
+                            {movie.map((data) =>
                                 <div key={data.maPhim} className="item"> 
                                     <Grid
                                         container
                                         justify="space-between"
                                     >
-                                        <Grid item
+                                        <Grid
                                             container
                                         > 
                                             <div className="content">
@@ -63,8 +64,19 @@ function Hero() {
                             )} 
                         </Slider>
                     </Grid>
-                    <Grid container item sm={6} className="quick-book">
-                        <Typography variant="h3" color="secondary">Đặt vé nhanh</Typography>
+                    <Grid container
+                     item 
+                     sm={6}
+                     alignItems="flex-start"
+                     className="quick-book">
+                        <Typography variant="h3" color="secondary">Phim nổi bật</Typography>  
+                        <Grid container item sm={12} spacing={2}> 
+                            {movie.map((dataItem)=>
+                                <Grid container item sm={3} key={dataItem.maPhim} >
+                                    <img src={dataItem.hinhAnh} alt={dataItem.moTa} height="48%"/>
+                                </Grid>  
+                            )} 
+                        </Grid> 
                     </Grid>
                 </Grid>
             </Container>
