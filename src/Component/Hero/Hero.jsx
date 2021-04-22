@@ -18,6 +18,10 @@ function Hero() {
         speed: 500,
         autoplaySpeed: 5000,
     };
+    const fullDayMY = (date) =>{
+        const d = new Date(date)
+       return  d.getDate()+ "-" + d.getMonth()+"-" + d.getFullYear()
+    }
     useEffect(()=>{
         const fetchMovie = async () => {
             const respond = await fetch('https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=1&soPhanTuTrenTrang=8');
@@ -48,7 +52,7 @@ function Hero() {
                                             <div className="content">
                                                 <Typography variant="h3" color="secondary">{data.tenPhim}</Typography>
                                                 <p><b>Miêu tả</b> : <em>{data.moTa}</em></p>
-                                                <p><b>Ngày khởi chiếu</b> : <em>{data.ngayKhoiChieu}</em></p>
+                                                <p><b>Ngày khởi chiếu</b> : <em>{fullDayMY(data.ngayKhoiChieu)}</em></p>
                                                 <p><b>Đánh giá</b> : <em>{data.danhGia}/10</em></p>
                                             
                                                 <Button variant="text" color="primary">

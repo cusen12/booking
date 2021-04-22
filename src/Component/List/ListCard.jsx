@@ -1,7 +1,8 @@
 import { Button, ButtonGroup, Container, Grid, Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import CardItemMovie from '../CardItemMovie/CardItemMovie';
-import Hero from '../Hero/Hero';
+import Hero from '../Hero/Hero'; 
+import Rated from '../Rated/Rated';
 import './ListCard.scss'
 
 function ListCard() {
@@ -16,21 +17,22 @@ function ListCard() {
     }
     useEffect(()=>{
         const listMoviePagination = async () => {
-            const respond = await fetch(`https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=${currentPage}&soPhanTuTrenTrang=12`);
+            const respond = await fetch(`https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhimPhanTrang?soTrang=${currentPage}&soPhanTuTrenTrang=24`);
             const respondJson = await respond.json();
             setitemMovie(respondJson.items);
             setTotalPage(respondJson.totalPages); 
             return respondJson;
         }
         listMoviePagination();
-    },[currentPage]); 
+    },[currentPage]);  
     return (
         <> 
             <Container>
                 <Hero/>
                 <Grid container
-                    justify="space-between">
-                    <Grid item md={9} spacing={2}
+                    justify="space-between"
+                    alignItems="flex-start">
+                    <Grid item md={10} spacing={2}
                         container
                         direction="column"
                         wrap="wrap"
@@ -53,7 +55,7 @@ function ListCard() {
                             </Grid>
                     </Grid>
                     
-                    <Grid item md={3} spacing={2}
+                    <Grid item md={2} spacing={2}
                         container
                         direction="column"
                         justify="space-between"
@@ -62,9 +64,16 @@ function ListCard() {
                                 direction="column"
                                 wrap="wrap"
                                 justify="space-between">
-                                <Typography variant="h3" align="center" color="primary" className="bTittle"> Tra cứu  </Typography>
+                                <Typography variant="h3"align="center" color="primary" className="bTittle top-rated"> Top Rated </Typography>
+                                <Grid item md={12}  container
+                                    direction="row"
+                                    wrap="wrap"
+                                    justify="space-between">  
+                                    <Rated/>
+                            </Grid>
                            </Grid>
                     </Grid> 
+                    
                 </Grid>
             </Container>
            

@@ -12,43 +12,45 @@ function CardItemMovie(props) {
     const { itemMovie } = props;
     return (
         <> 
-            {itemMovie.map((data) => 
-                <Grid className="cardItem" key={data.maPhim} item xs={3}
-                container>
-                    <Card>
-                        <Grid container
-                            justify="space-between"
-                            direction="column"
-                            className="card-box"
-                        >
-                            <Grid item> 
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        alt="Contemplative Reptile"
-                                        height="140"
-                                        image={data.hinhAnh}
-                                        title="Contemplative Reptile"
-                                        
-                                    />
-                                    <CardContent>
-                                    <Typography className="titleCard" color="secondary" gutterBottom variant="h4" component="h4">
-                                        {data.tenPhim}
-                                    </Typography>  
-                                    </CardContent> 
-                                </CardActionArea> 
+            
+                {itemMovie.map((data) => 
+                    <Grid className="cardItem" key={data.maPhim} item xs={3}
+                    container>
+                        <Card>
+                            <Grid container
+                                justify="space-between"
+                                direction="column"
+                                className="card-box"
+                            >
+                                <Grid item> 
+                                    <CardActionArea>
+                                        <CardMedia
+                                            component="img"
+                                            alt="Contemplative Reptile"
+                                            height="140"
+                                            image={data.hinhAnh}
+                                            title="Contemplative Reptile"
+                                            
+                                        />
+                                        <CardContent>
+                                        <Typography className="titleCard" color="secondary" gutterBottom variant="h4" component="h4">
+                                            {data.tenPhim}
+                                        </Typography>  
+                                        </CardContent> 
+                                    </CardActionArea> 
+                                </Grid>
+                                <Grid item className="buttonGr">
+                                    <ButtonGroup variant="text" color="secondary">
+                                            <Button> Đặt vé </Button>
+                                            <Button><Link to={`detail${data.maPhim}`}>Xem</Link></Button>
+                                    </ButtonGroup>  
+                                </Grid>
                             </Grid>
-                            <Grid item className="buttonGr">
-                                <ButtonGroup variant="text" color="secondary">
-                                        <Button> Đặt vé </Button>
-                                        <Button><Link to={`detail${data.maPhim}`}>Xem</Link></Button>
-                                </ButtonGroup>  
-                            </Grid>
-                        </Grid>
-                        
-                    </Card> 
-                </Grid>
-            )}  
+                            
+                        </Card> 
+                    </Grid>
+                )} 
+             
         </>
     );
 }
